@@ -1,6 +1,7 @@
 package com.example.spring_project_onboarding.trainee.controller;
 
 import com.example.spring_project_onboarding.trainee.dto.TraineeCreateReqDto;
+import com.example.spring_project_onboarding.trainee.dto.TraineeReqDto;
 import com.example.spring_project_onboarding.trainee.service.TraineeService;
 import com.example.spring_project_onboarding.trainer.dto.TrainerReqDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,12 @@ public class TraineeController {
     @PostMapping("/trainee/create")
     public String Save(@RequestBody TraineeCreateReqDto traineeCreateReqDto){
         traineeService.Save(traineeCreateReqDto);
-        return "ok";
+        return "trainee create ok";
+    }
+    @PatchMapping("/trainee/update/{id}")
+    public String updateTrainee(@PathVariable Long id, @RequestBody TraineeReqDto traineeReqDto) {
+        traineeService.Update(id, traineeReqDto);
+        return "trainee update Ok";
     }
 
 

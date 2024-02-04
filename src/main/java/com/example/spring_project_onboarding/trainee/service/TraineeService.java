@@ -2,10 +2,14 @@ package com.example.spring_project_onboarding.trainee.service;
 
 import com.example.spring_project_onboarding.trainee.domain.Trainee;
 import com.example.spring_project_onboarding.trainee.dto.TraineeCreateReqDto;
+import com.example.spring_project_onboarding.trainee.dto.TraineeReqDto;
 import com.example.spring_project_onboarding.trainee.repogitory.TraineeRepository;
+import com.example.spring_project_onboarding.trainer.domain.Trainer;
+import com.example.spring_project_onboarding.trainer.dto.TrainerReqDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 
 @Service
@@ -25,5 +29,14 @@ public class TraineeService {
                 .phoneNumber(traineeCreateReqDto.getPhoneNumber())
                 .build();
         traineeRepository.save(trainee);
+    }
+    public Trainee Update(Long id, TraineeReqDto traineeReqDto) {
+        Trainee trainee = traineeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found trainee"));
+        trainee.updateTainer(
+                traineeReqDto.getName(),
+                traineeReqDto.getPassword(),
+                traineeReqDto.getPhoneNumber(),
+                traineeReqDto.getImage());
+        return trainee;
     }
 }

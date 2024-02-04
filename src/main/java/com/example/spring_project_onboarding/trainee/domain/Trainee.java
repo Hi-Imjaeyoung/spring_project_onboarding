@@ -33,4 +33,10 @@ public class Trainee {
     @UpdateTimestamp
     private LocalDateTime updateTime;
 
+    public void updateTainer(String name, String password, String phoneNumber, String image) {
+        this.name = name;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.image = image;
+    }
 }
