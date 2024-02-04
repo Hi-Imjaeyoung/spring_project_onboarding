@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -30,6 +31,9 @@ public class Trainer {
     private String image;
     @Builder.Default
     private String delYn="N";
+
+    @OneToMany(mappedBy = "trainer")
+    private List<Trainer> trainers;
 
     @CreationTimestamp
     private LocalDateTime createTime;

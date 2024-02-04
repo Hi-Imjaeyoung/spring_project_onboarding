@@ -1,5 +1,6 @@
 package com.example.spring_project_onboarding.trainee.domain;
 
+import com.example.spring_project_onboarding.trainer.domain.Trainer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,6 +35,11 @@ public class Trainee {
     private LocalDateTime createTime;
     @UpdateTimestamp
     private LocalDateTime updateTime;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false)
+    private Trainer trainer;
 
     public void updateTainee(String name, String password, String phoneNumber, String image) {
         this.name = name;
