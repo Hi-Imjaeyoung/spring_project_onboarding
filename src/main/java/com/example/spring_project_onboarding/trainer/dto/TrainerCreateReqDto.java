@@ -10,8 +10,8 @@ import lombok.Data;
 public class TrainerCreateReqDto {
     private String name;
     private String email;
+    private String password;
     private String phoneNumber;
     private String career;
-
-
+    private String image;
 }
