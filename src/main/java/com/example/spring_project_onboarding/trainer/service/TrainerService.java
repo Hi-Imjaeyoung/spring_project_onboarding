@@ -38,4 +38,9 @@ public class TrainerService {
                 trainerReqDto.getImage());
         return trainer;
     }
+    public Trainer Delete(Long id) {
+        Trainer trainer = trainerRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(("not found trainer")));
+        trainer.deleteTainer();
+        return trainer;
+    }
 }

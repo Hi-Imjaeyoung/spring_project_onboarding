@@ -28,6 +28,8 @@ public class Trainer {
     private String career;
     private String phoneNumber;
     private String image;
+    @Builder.Default
+    private String delYn="N";
 
     @CreationTimestamp
     private LocalDateTime createTime;
@@ -42,4 +44,7 @@ public class Trainer {
         this.image = image;
     }
 
+    public void deleteTainer() {
+        this.delYn = "Y";
+    }
 }
