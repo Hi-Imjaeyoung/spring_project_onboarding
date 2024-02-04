@@ -1,8 +1,8 @@
-package com.example.spring_project_onboarding.Trainer.service;
+package com.example.spring_project_onboarding.trainer.service;
 
-import com.example.spring_project_onboarding.Trainer.domain.Trainer;
-import com.example.spring_project_onboarding.Trainer.dto.TrainerCreateReqDto;
-import com.example.spring_project_onboarding.Trainer.repogitory.TrainerRepository;
+import com.example.spring_project_onboarding.trainer.domain.Trainer;
+import com.example.spring_project_onboarding.trainer.dto.TrainerCreateReqDto;
+import com.example.spring_project_onboarding.trainer.repogitory.TrainerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

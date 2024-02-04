@@ -1,4 +1,4 @@
-package com.example.spring_project_onboarding.Trainer.domain;
+package com.example.spring_project_onboarding.trainer.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
