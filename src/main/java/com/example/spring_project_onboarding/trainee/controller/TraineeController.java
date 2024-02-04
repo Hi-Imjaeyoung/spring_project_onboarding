@@ -15,7 +15,7 @@ public class TraineeController {
         this.traineeService = traineeService;
     }
 
-    @PostMapping("/Trainer/create")
+    @PostMapping("/Trainee/create")
     public String Save(@RequestBody TraineeCreateReqDto traineeCreateReqDto){
         traineeService.Save(traineeCreateReqDto);
         return "ok";
