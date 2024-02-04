@@ -21,6 +21,7 @@ public class TraineeService {
         Trainee trainee = Trainee.builder()
                 .name(traineeCreateReqDto.getName())
                 .email(traineeCreateReqDto.getEmail())
+                .password(traineeCreateReqDto.getPassword())
                 .phoneNumber(traineeCreateReqDto.getPhoneNumber())
                 .build();
         traineeRepository.save(trainee);
