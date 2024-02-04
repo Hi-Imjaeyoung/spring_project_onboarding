@@ -1,5 +1,4 @@
-package com.example.spring_project_onboarding.Trainer.Dto;
-
+package com.example.spring_project_onboarding.Trainer.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
