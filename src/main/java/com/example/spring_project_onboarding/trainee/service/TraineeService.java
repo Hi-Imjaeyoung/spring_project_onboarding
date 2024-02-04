@@ -32,11 +32,16 @@ public class TraineeService {
     }
     public Trainee Update(Long id, TraineeReqDto traineeReqDto) {
         Trainee trainee = traineeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found trainee"));
-        trainee.updateTainer(
+        trainee.updateTainee(
                 traineeReqDto.getName(),
                 traineeReqDto.getPassword(),
                 traineeReqDto.getPhoneNumber(),
                 traineeReqDto.getImage());
+        return trainee;
+    }
+    public Trainee Delete(Long id) {
+        Trainee trainee = traineeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found trainee"));
+        trainee.deleteTainee();
         return trainee;
     }
 }

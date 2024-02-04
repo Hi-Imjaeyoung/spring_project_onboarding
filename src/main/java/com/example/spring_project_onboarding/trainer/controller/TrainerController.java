@@ -27,7 +27,7 @@ public class TrainerController {
         return "Update Ok";
     }
     @DeleteMapping("/trainer/delete/{id}")
-    public String itemDelete(@PathVariable Long id){
+    public String trainerDelete(@PathVariable Long id){
         Trainer trainer = trainerService.Delete(id);
         return "Delete Ok";
     }

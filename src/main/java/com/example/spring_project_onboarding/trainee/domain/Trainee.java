@@ -27,16 +27,21 @@ public class Trainee {
     private String password;
     private String phoneNumber;
     private String image;
+    @Builder.Default
+    private String delYn="N";
 
     @CreationTimestamp
     private LocalDateTime createTime;
     @UpdateTimestamp
     private LocalDateTime updateTime;
 
-    public void updateTainer(String name, String password, String phoneNumber, String image) {
+    public void updateTainee(String name, String password, String phoneNumber, String image) {
         this.name = name;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.image = image;
+    }
+    public void deleteTainee() {
+        this.delYn = "Y";
     }
 }
