@@ -23,6 +23,7 @@ public class TrainerService {
         Trainer trainer = Trainer.builder()
                 .name(trainerCreateReqDto.getName())
                 .email(trainerCreateReqDto.getEmail())
+                .password(trainerCreateReqDto.getPassword())
                 .phoneNumber(trainerCreateReqDto.getPhoneNumber())
                 .career(trainerCreateReqDto.getCareer())
                 .build();
