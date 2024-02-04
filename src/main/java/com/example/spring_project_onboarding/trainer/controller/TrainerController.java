@@ -5,13 +5,12 @@ import com.example.spring_project_onboarding.trainer.dto.TrainerCreateReqDto;
 import com.example.spring_project_onboarding.trainer.dto.TrainerReqDto;
 import com.example.spring_project_onboarding.trainer.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TrainerController {
     private final TrainerService trainerService;
+
     @Autowired
     public TrainerController(TrainerService trainerService) {
         this.trainerService = trainerService;
